@@ -29,6 +29,46 @@ namespace FUJIFILM.InterpretacionesDF.Site
             }
 
         }
+        public string version
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["version"].ToString();
+            }
+
+        }
+        public string idCarpeta
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["idCarpeta"].ToString();
+            }
+
+        }
+        public string InstSyn
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["InstSyn"].ToString();
+            }
+
+        }
+        public string urlSyn
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["urlSyn"].ToString();
+            }
+
+        }
+        public string carpetaSyn
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["carpetaSyn"].ToString();
+            }
+
+        }
         public enum MessageType { Success, Error, Info, Warning };
 
         public static string logUser = HttpContext.Current.User.Identity.Name.Substring(HttpContext.Current.User.Identity.Name.IndexOf(@"\") + 1);
@@ -145,6 +185,25 @@ namespace FUJIFILM.InterpretacionesDF.Site
                 {
                     return;
                 }
+
+                vBuscaEnRevision mdl = new vBuscaEnRevision();
+                mdl = e.Row.DataItem as vBuscaEnRevision;
+                Image btnSolRev = (Image)e.Row.FindControl("btnSolRev");
+                try
+                {
+                    if (mdl.SolicitaRevision == 0)
+                    {
+                        btnSolRev.ImageUrl = "~/Images/transparente.png";
+                    }
+                    if (mdl.SolicitaRevision == 1)
+                    {
+                        btnSolRev.ImageUrl = "~/Images/transparente.png";
+                    }
+                }
+                catch(Exception eImagen)
+                {
+                    escribirBitacora(eImagen.Message);
+                }
             }
             catch (Exception egrdb)
             {
@@ -171,6 +230,25 @@ namespace FUJIFILM.InterpretacionesDF.Site
                 if (e.Row.RowType != DataControlRowType.DataRow)
                 {
                     return;
+                }
+
+                vBuscaEnRevision mdl = new vBuscaEnRevision();
+                mdl = e.Row.DataItem as vBuscaEnRevision;
+                try
+                {
+                    Image btnSolRev = (Image)e.Row.FindControl("btnSolRev");
+                    if (mdl.SolicitaRevision == 0)
+                    {
+                        btnSolRev.ImageUrl = "~/Images/transparente.png";
+                    }
+                    if (mdl.SolicitaRevision == 1)
+                    {
+                        btnSolRev.ImageUrl = "~/Images/transparente.png";
+                    }
+                }
+                catch (Exception eImagen)
+                {
+                    escribirBitacora(eImagen.Message);
                 }
             }
             catch (Exception egrdb)
@@ -227,7 +305,7 @@ namespace FUJIFILM.InterpretacionesDF.Site
                         {
                             vBuscaEnRevision _mdl = _lstCompleta.Where(x => x.AccessionNumber == e.CommandArgument.ToString()).First();
                             string _url = URLTarget + _mdl.AccessionNumber + "&data2=" + logUser1;
-                            generaArchivo(_mdl, 1, _url);
+                            generaArchivo(_mdl, 1, _url, _mdl.AccessionNumber);
                             //ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "Cerrar", "javascript:Redirecciona('" + URLTarget + _mdl.AccessionNumber + "&data2=" + logUser + "');", true);
                             cargaInterpretaciones();
                             cargaInterpretacionesRev();
@@ -263,7 +341,7 @@ namespace FUJIFILM.InterpretacionesDF.Site
                             if (_mdl != null)
                             {
                                 string url = URLTarget + _mdl.AccessionNumber + "&data2=" + logUser1;
-                                generaArchivo(_mdl, 2, url);
+                                generaArchivo(_mdl, 2, url, _mdl.AccessionNumber);
                             }
                             else
                             {
@@ -615,14 +693,15 @@ namespace FUJIFILM.InterpretacionesDF.Site
             }
         }
 
-        private void generaArchivo(vBuscaEnRevision _mdl, int Revision, string _url)
+        private void generaArchivo(vBuscaEnRevision _mdl, int Revision, string _url, string AccNumber)
         {
             try
             {
                 String sbA = crearArchivo(_mdl, Revision);
                 // Write the string to a file.
                 //StreamWriter file = new StreamWriter("c:\\test.txt");
-                ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "Cerrar", "javascript:escribeArchivo('" + sbA + "', '" + _url + "');", true);
+                //escribeArchivo(strLines, _url, urlSyn, version, idCarpeta, AccNum, InstSyn, pathSyn)
+                ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "Cerrar", "javascript:escribeArchivo('" + sbA + "', '" + _url + "', '" + urlSyn + "', '" + version + "', '" + idCarpeta + "', '" + AccNumber + "', '" + InstSyn + "', '" + carpetaSyn + "');", true);
                 //file.WriteLine(sbA);
                 //file.Close();
                 ShowMessage("El proceso terminó correctamente", MessageType.Success, "alertPrio_container"); //MensajeSis.setMensaje("El proceso terminó correctamente.", 1);

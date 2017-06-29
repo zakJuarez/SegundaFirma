@@ -65,14 +65,6 @@ namespace FUJIFILM.InterpretacionesDF.DataAccess
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<vBuscaEnRevision> vBuscaEnRevision
-		{
-			get
-			{
-				return this.GetTable<vBuscaEnRevision>();
-			}
-		}
-		
 		public System.Data.Linq.Table<opeUsuario> opeUsuario
 		{
 			get
@@ -81,884 +73,19 @@ namespace FUJIFILM.InterpretacionesDF.DataAccess
 			}
 		}
 		
+		public System.Data.Linq.Table<vBuscaEnRevision> vBuscaEnRevision
+		{
+			get
+			{
+				return this.GetTable<vBuscaEnRevision>();
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.spProcedeBloqueo")]
 		public ISingleResult<spProcedeBloqueoResult> spProcedeBloqueo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string numeroAcceso, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string usuarioID)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), numeroAcceso, usuarioID);
 			return ((ISingleResult<spProcedeBloqueoResult>)(result.ReturnValue));
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vBuscaEnRevision")]
-	public partial class vBuscaEnRevision
-	{
-		
-		private string _AccessionNumber;
-		
-		private string _ExternalPatientID;
-		
-		private string _InternalPatientID;
-		
-		private string _FullName;
-		
-		private string _FirstName;
-		
-		private string _LastName;
-		
-		private string _DOB;
-		
-		private string _Gender;
-		
-		private string _Pregnancy;
-		
-		private string _LastMenstruationDate;
-		
-		private string _StudyId;
-		
-		private string _RISOderId;
-		
-		private string _ProcedureCode;
-		
-		private string _ProcedureDescription;
-		
-		private string _Modality;
-		
-		private string _ReasonForExam;
-		
-		private string _StudyStatusCode;
-		
-		private string _StudyImageCount;
-		
-		private string _StudyTimeStamp;
-		
-		private string _AdmissionTimeDate;
-		
-		private string _VisitClass;
-		
-		private string _VisitNumber;
-		
-		private string _Priority;
-		
-		private string _SiteCode;
-		
-		private string _PrimaryLocId;
-		
-		private string _PrimaryLocation;
-		
-		private string _CurrentLocId;
-		
-		private string _CurrentLocation;
-		
-		private string _StudySiteName;
-		
-		private string _RequestingPhysicianId;
-		
-		private string _RequestingPhysician;
-		
-		private string _ReferringPhysicianId;
-		
-		private string _ReferringPhysician;
-		
-		private string _AttendingPhysicianId;
-		
-		private string _AttendingPhysician;
-		
-		private string _usuarioDicto;
-		
-		private string _usuarioDictoNombre;
-		
-		private string _usuarioDictoApellidoPaterno;
-		
-		private string _usuarioDictoApellidoMaterno;
-		
-		private System.Nullable<int> _STATUS;
-		
-		private System.Nullable<bool> _oeInterpretacionAprobada;
-		
-		private string _oeComentarioValidacion;
-		
-		private string _usuarioRevisoID;
-		
-		private string _usuarioRevisoNombre;
-		
-		private string _usuarioRevisoApellidoPaterno;
-		
-		private string _usuarioRevisoApellidoMaterno;
-		
-		private bool _bkStatus;
-		
-		private System.Nullable<System.DateTime> _fechayhora;
-		
-		public vBuscaEnRevision()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccessionNumber", DbType="NVarChar(50)")]
-		public string AccessionNumber
-		{
-			get
-			{
-				return this._AccessionNumber;
-			}
-			set
-			{
-				if ((this._AccessionNumber != value))
-				{
-					this._AccessionNumber = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExternalPatientID", DbType="NVarChar(50)")]
-		public string ExternalPatientID
-		{
-			get
-			{
-				return this._ExternalPatientID;
-			}
-			set
-			{
-				if ((this._ExternalPatientID != value))
-				{
-					this._ExternalPatientID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InternalPatientID", DbType="NVarChar(50)")]
-		public string InternalPatientID
-		{
-			get
-			{
-				return this._InternalPatientID;
-			}
-			set
-			{
-				if ((this._InternalPatientID != value))
-				{
-					this._InternalPatientID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullName", DbType="NVarChar(453) NOT NULL", CanBeNull=false)]
-		public string FullName
-		{
-			get
-			{
-				return this._FullName;
-			}
-			set
-			{
-				if ((this._FullName != value))
-				{
-					this._FullName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
-		public string FirstName
-		{
-			get
-			{
-				return this._FirstName;
-			}
-			set
-			{
-				if ((this._FirstName != value))
-				{
-					this._FirstName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="NVarChar(301) NOT NULL", CanBeNull=false)]
-		public string LastName
-		{
-			get
-			{
-				return this._LastName;
-			}
-			set
-			{
-				if ((this._LastName != value))
-				{
-					this._LastName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DOB", DbType="VarChar(10)")]
-		public string DOB
-		{
-			get
-			{
-				return this._DOB;
-			}
-			set
-			{
-				if ((this._DOB != value))
-				{
-					this._DOB = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gender", DbType="NVarChar(1)")]
-		public string Gender
-		{
-			get
-			{
-				return this._Gender;
-			}
-			set
-			{
-				if ((this._Gender != value))
-				{
-					this._Gender = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pregnancy", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
-		public string Pregnancy
-		{
-			get
-			{
-				return this._Pregnancy;
-			}
-			set
-			{
-				if ((this._Pregnancy != value))
-				{
-					this._Pregnancy = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastMenstruationDate", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
-		public string LastMenstruationDate
-		{
-			get
-			{
-				return this._LastMenstruationDate;
-			}
-			set
-			{
-				if ((this._LastMenstruationDate != value))
-				{
-					this._LastMenstruationDate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudyId", DbType="NVarChar(200)")]
-		public string StudyId
-		{
-			get
-			{
-				return this._StudyId;
-			}
-			set
-			{
-				if ((this._StudyId != value))
-				{
-					this._StudyId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RISOderId", DbType="NVarChar(50)")]
-		public string RISOderId
-		{
-			get
-			{
-				return this._RISOderId;
-			}
-			set
-			{
-				if ((this._RISOderId != value))
-				{
-					this._RISOderId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProcedureCode", DbType="NVarChar(50)")]
-		public string ProcedureCode
-		{
-			get
-			{
-				return this._ProcedureCode;
-			}
-			set
-			{
-				if ((this._ProcedureCode != value))
-				{
-					this._ProcedureCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProcedureDescription", DbType="NVarChar(100)")]
-		public string ProcedureDescription
-		{
-			get
-			{
-				return this._ProcedureDescription;
-			}
-			set
-			{
-				if ((this._ProcedureDescription != value))
-				{
-					this._ProcedureDescription = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modality", DbType="NVarChar(50)")]
-		public string Modality
-		{
-			get
-			{
-				return this._Modality;
-			}
-			set
-			{
-				if ((this._Modality != value))
-				{
-					this._Modality = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReasonForExam", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
-		public string ReasonForExam
-		{
-			get
-			{
-				return this._ReasonForExam;
-			}
-			set
-			{
-				if ((this._ReasonForExam != value))
-				{
-					this._ReasonForExam = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudyStatusCode", DbType="VarChar(2) NOT NULL", CanBeNull=false)]
-		public string StudyStatusCode
-		{
-			get
-			{
-				return this._StudyStatusCode;
-			}
-			set
-			{
-				if ((this._StudyStatusCode != value))
-				{
-					this._StudyStatusCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudyImageCount", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
-		public string StudyImageCount
-		{
-			get
-			{
-				return this._StudyImageCount;
-			}
-			set
-			{
-				if ((this._StudyImageCount != value))
-				{
-					this._StudyImageCount = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudyTimeStamp", DbType="VarChar(21)")]
-		public string StudyTimeStamp
-		{
-			get
-			{
-				return this._StudyTimeStamp;
-			}
-			set
-			{
-				if ((this._StudyTimeStamp != value))
-				{
-					this._StudyTimeStamp = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdmissionTimeDate", DbType="VarChar(21)")]
-		public string AdmissionTimeDate
-		{
-			get
-			{
-				return this._AdmissionTimeDate;
-			}
-			set
-			{
-				if ((this._AdmissionTimeDate != value))
-				{
-					this._AdmissionTimeDate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitClass", DbType="NVarChar(1)")]
-		public string VisitClass
-		{
-			get
-			{
-				return this._VisitClass;
-			}
-			set
-			{
-				if ((this._VisitClass != value))
-				{
-					this._VisitClass = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitNumber", DbType="NVarChar(50)")]
-		public string VisitNumber
-		{
-			get
-			{
-				return this._VisitNumber;
-			}
-			set
-			{
-				if ((this._VisitNumber != value))
-				{
-					this._VisitNumber = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Priority", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
-		public string Priority
-		{
-			get
-			{
-				return this._Priority;
-			}
-			set
-			{
-				if ((this._Priority != value))
-				{
-					this._Priority = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SiteCode", DbType="NVarChar(12)")]
-		public string SiteCode
-		{
-			get
-			{
-				return this._SiteCode;
-			}
-			set
-			{
-				if ((this._SiteCode != value))
-				{
-					this._SiteCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimaryLocId", DbType="NVarChar(12)")]
-		public string PrimaryLocId
-		{
-			get
-			{
-				return this._PrimaryLocId;
-			}
-			set
-			{
-				if ((this._PrimaryLocId != value))
-				{
-					this._PrimaryLocId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimaryLocation", DbType="NVarChar(12)")]
-		public string PrimaryLocation
-		{
-			get
-			{
-				return this._PrimaryLocation;
-			}
-			set
-			{
-				if ((this._PrimaryLocation != value))
-				{
-					this._PrimaryLocation = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CurrentLocId", DbType="NVarChar(100)")]
-		public string CurrentLocId
-		{
-			get
-			{
-				return this._CurrentLocId;
-			}
-			set
-			{
-				if ((this._CurrentLocId != value))
-				{
-					this._CurrentLocId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CurrentLocation", DbType="NVarChar(100)")]
-		public string CurrentLocation
-		{
-			get
-			{
-				return this._CurrentLocation;
-			}
-			set
-			{
-				if ((this._CurrentLocation != value))
-				{
-					this._CurrentLocation = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudySiteName", DbType="NVarChar(12)")]
-		public string StudySiteName
-		{
-			get
-			{
-				return this._StudySiteName;
-			}
-			set
-			{
-				if ((this._StudySiteName != value))
-				{
-					this._StudySiteName = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RequestingPhysicianId", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
-		public string RequestingPhysicianId
-		{
-			get
-			{
-				return this._RequestingPhysicianId;
-			}
-			set
-			{
-				if ((this._RequestingPhysicianId != value))
-				{
-					this._RequestingPhysicianId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RequestingPhysician", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
-		public string RequestingPhysician
-		{
-			get
-			{
-				return this._RequestingPhysician;
-			}
-			set
-			{
-				if ((this._RequestingPhysician != value))
-				{
-					this._RequestingPhysician = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReferringPhysicianId", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
-		public string ReferringPhysicianId
-		{
-			get
-			{
-				return this._ReferringPhysicianId;
-			}
-			set
-			{
-				if ((this._ReferringPhysicianId != value))
-				{
-					this._ReferringPhysicianId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReferringPhysician", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
-		public string ReferringPhysician
-		{
-			get
-			{
-				return this._ReferringPhysician;
-			}
-			set
-			{
-				if ((this._ReferringPhysician != value))
-				{
-					this._ReferringPhysician = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AttendingPhysicianId", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
-		public string AttendingPhysicianId
-		{
-			get
-			{
-				return this._AttendingPhysicianId;
-			}
-			set
-			{
-				if ((this._AttendingPhysicianId != value))
-				{
-					this._AttendingPhysicianId = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AttendingPhysician", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
-		public string AttendingPhysician
-		{
-			get
-			{
-				return this._AttendingPhysician;
-			}
-			set
-			{
-				if ((this._AttendingPhysician != value))
-				{
-					this._AttendingPhysician = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioDicto", DbType="NVarChar(50)")]
-		public string usuarioDicto
-		{
-			get
-			{
-				return this._usuarioDicto;
-			}
-			set
-			{
-				if ((this._usuarioDicto != value))
-				{
-					this._usuarioDicto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioDictoNombre", DbType="NVarChar(150)")]
-		public string usuarioDictoNombre
-		{
-			get
-			{
-				return this._usuarioDictoNombre;
-			}
-			set
-			{
-				if ((this._usuarioDictoNombre != value))
-				{
-					this._usuarioDictoNombre = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioDictoApellidoPaterno", DbType="NVarChar(150)")]
-		public string usuarioDictoApellidoPaterno
-		{
-			get
-			{
-				return this._usuarioDictoApellidoPaterno;
-			}
-			set
-			{
-				if ((this._usuarioDictoApellidoPaterno != value))
-				{
-					this._usuarioDictoApellidoPaterno = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioDictoApellidoMaterno", DbType="NVarChar(150)")]
-		public string usuarioDictoApellidoMaterno
-		{
-			get
-			{
-				return this._usuarioDictoApellidoMaterno;
-			}
-			set
-			{
-				if ((this._usuarioDictoApellidoMaterno != value))
-				{
-					this._usuarioDictoApellidoMaterno = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STATUS", DbType="Int")]
-		public System.Nullable<int> STATUS
-		{
-			get
-			{
-				return this._STATUS;
-			}
-			set
-			{
-				if ((this._STATUS != value))
-				{
-					this._STATUS = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_oeInterpretacionAprobada", DbType="Bit")]
-		public System.Nullable<bool> oeInterpretacionAprobada
-		{
-			get
-			{
-				return this._oeInterpretacionAprobada;
-			}
-			set
-			{
-				if ((this._oeInterpretacionAprobada != value))
-				{
-					this._oeInterpretacionAprobada = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_oeComentarioValidacion", DbType="NVarChar(MAX)")]
-		public string oeComentarioValidacion
-		{
-			get
-			{
-				return this._oeComentarioValidacion;
-			}
-			set
-			{
-				if ((this._oeComentarioValidacion != value))
-				{
-					this._oeComentarioValidacion = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioRevisoID", DbType="NVarChar(50)")]
-		public string usuarioRevisoID
-		{
-			get
-			{
-				return this._usuarioRevisoID;
-			}
-			set
-			{
-				if ((this._usuarioRevisoID != value))
-				{
-					this._usuarioRevisoID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioRevisoNombre", DbType="NVarChar(150)")]
-		public string usuarioRevisoNombre
-		{
-			get
-			{
-				return this._usuarioRevisoNombre;
-			}
-			set
-			{
-				if ((this._usuarioRevisoNombre != value))
-				{
-					this._usuarioRevisoNombre = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioRevisoApellidoPaterno", DbType="NVarChar(150)")]
-		public string usuarioRevisoApellidoPaterno
-		{
-			get
-			{
-				return this._usuarioRevisoApellidoPaterno;
-			}
-			set
-			{
-				if ((this._usuarioRevisoApellidoPaterno != value))
-				{
-					this._usuarioRevisoApellidoPaterno = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioRevisoApellidoMaterno", DbType="NVarChar(150)")]
-		public string usuarioRevisoApellidoMaterno
-		{
-			get
-			{
-				return this._usuarioRevisoApellidoMaterno;
-			}
-			set
-			{
-				if ((this._usuarioRevisoApellidoMaterno != value))
-				{
-					this._usuarioRevisoApellidoMaterno = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_bkStatus", DbType="Bit NOT NULL")]
-		public bool bkStatus
-		{
-			get
-			{
-				return this._bkStatus;
-			}
-			set
-			{
-				if ((this._bkStatus != value))
-				{
-					this._bkStatus = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fechayhora", DbType="DateTime")]
-		public System.Nullable<System.DateTime> fechayhora
-		{
-			get
-			{
-				return this._fechayhora;
-			}
-			set
-			{
-				if ((this._fechayhora != value))
-				{
-					this._fechayhora = value;
-				}
-			}
 		}
 	}
 	
@@ -2868,6 +1995,897 @@ namespace FUJIFILM.InterpretacionesDF.DataAccess
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.vBuscaEnRevision")]
+	public partial class vBuscaEnRevision
+	{
+		
+		private string _AccessionNumber;
+		
+		private string _ExternalPatientID;
+		
+		private string _InternalPatientID;
+		
+		private string _FullName;
+		
+		private string _FirstName;
+		
+		private string _LastName;
+		
+		private string _DOB;
+		
+		private string _Gender;
+		
+		private string _Pregnancy;
+		
+		private string _LastMenstruationDate;
+		
+		private string _StudyId;
+		
+		private string _RISOderId;
+		
+		private string _ProcedureCode;
+		
+		private string _ProcedureDescription;
+		
+		private string _Modality;
+		
+		private string _ReasonForExam;
+		
+		private string _StudyStatusCode;
+		
+		private string _StudyImageCount;
+		
+		private string _StudyTimeStamp;
+		
+		private string _AdmissionTimeDate;
+		
+		private string _VisitClass;
+		
+		private string _VisitNumber;
+		
+		private string _Priority;
+		
+		private string _SiteCode;
+		
+		private string _PrimaryLocId;
+		
+		private string _PrimaryLocation;
+		
+		private string _CurrentLocId;
+		
+		private string _CurrentLocation;
+		
+		private string _StudySiteName;
+		
+		private string _RequestingPhysicianId;
+		
+		private string _RequestingPhysician;
+		
+		private string _ReferringPhysicianId;
+		
+		private string _ReferringPhysician;
+		
+		private string _AttendingPhysicianId;
+		
+		private string _AttendingPhysician;
+		
+		private string _usuarioDicto;
+		
+		private string _usuarioDictoNombre;
+		
+		private string _usuarioDictoApellidoPaterno;
+		
+		private string _usuarioDictoApellidoMaterno;
+		
+		private System.Nullable<int> _STATUS;
+		
+		private System.Nullable<bool> _oeInterpretacionAprobada;
+		
+		private string _oeComentarioValidacion;
+		
+		private string _usuarioRevisoID;
+		
+		private string _usuarioRevisoNombre;
+		
+		private string _usuarioRevisoApellidoPaterno;
+		
+		private string _usuarioRevisoApellidoMaterno;
+		
+		private bool _bkStatus;
+		
+		private System.Nullable<System.DateTime> _fechayhora;
+		
+		private int _SolicitaRevision;
+		
+		public vBuscaEnRevision()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AccessionNumber", DbType="NVarChar(50)")]
+		public string AccessionNumber
+		{
+			get
+			{
+				return this._AccessionNumber;
+			}
+			set
+			{
+				if ((this._AccessionNumber != value))
+				{
+					this._AccessionNumber = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ExternalPatientID", DbType="NVarChar(50)")]
+		public string ExternalPatientID
+		{
+			get
+			{
+				return this._ExternalPatientID;
+			}
+			set
+			{
+				if ((this._ExternalPatientID != value))
+				{
+					this._ExternalPatientID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_InternalPatientID", DbType="NVarChar(50)")]
+		public string InternalPatientID
+		{
+			get
+			{
+				return this._InternalPatientID;
+			}
+			set
+			{
+				if ((this._InternalPatientID != value))
+				{
+					this._InternalPatientID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullName", DbType="NVarChar(453) NOT NULL", CanBeNull=false)]
+		public string FullName
+		{
+			get
+			{
+				return this._FullName;
+			}
+			set
+			{
+				if ((this._FullName != value))
+				{
+					this._FullName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
+		public string FirstName
+		{
+			get
+			{
+				return this._FirstName;
+			}
+			set
+			{
+				if ((this._FirstName != value))
+				{
+					this._FirstName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="NVarChar(301) NOT NULL", CanBeNull=false)]
+		public string LastName
+		{
+			get
+			{
+				return this._LastName;
+			}
+			set
+			{
+				if ((this._LastName != value))
+				{
+					this._LastName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DOB", DbType="VarChar(10)")]
+		public string DOB
+		{
+			get
+			{
+				return this._DOB;
+			}
+			set
+			{
+				if ((this._DOB != value))
+				{
+					this._DOB = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gender", DbType="NVarChar(1)")]
+		public string Gender
+		{
+			get
+			{
+				return this._Gender;
+			}
+			set
+			{
+				if ((this._Gender != value))
+				{
+					this._Gender = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pregnancy", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string Pregnancy
+		{
+			get
+			{
+				return this._Pregnancy;
+			}
+			set
+			{
+				if ((this._Pregnancy != value))
+				{
+					this._Pregnancy = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastMenstruationDate", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string LastMenstruationDate
+		{
+			get
+			{
+				return this._LastMenstruationDate;
+			}
+			set
+			{
+				if ((this._LastMenstruationDate != value))
+				{
+					this._LastMenstruationDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudyId", DbType="NVarChar(200)")]
+		public string StudyId
+		{
+			get
+			{
+				return this._StudyId;
+			}
+			set
+			{
+				if ((this._StudyId != value))
+				{
+					this._StudyId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RISOderId", DbType="NVarChar(50)")]
+		public string RISOderId
+		{
+			get
+			{
+				return this._RISOderId;
+			}
+			set
+			{
+				if ((this._RISOderId != value))
+				{
+					this._RISOderId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProcedureCode", DbType="NVarChar(50)")]
+		public string ProcedureCode
+		{
+			get
+			{
+				return this._ProcedureCode;
+			}
+			set
+			{
+				if ((this._ProcedureCode != value))
+				{
+					this._ProcedureCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProcedureDescription", DbType="NVarChar(100)")]
+		public string ProcedureDescription
+		{
+			get
+			{
+				return this._ProcedureDescription;
+			}
+			set
+			{
+				if ((this._ProcedureDescription != value))
+				{
+					this._ProcedureDescription = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Modality", DbType="NVarChar(50)")]
+		public string Modality
+		{
+			get
+			{
+				return this._Modality;
+			}
+			set
+			{
+				if ((this._Modality != value))
+				{
+					this._Modality = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReasonForExam", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string ReasonForExam
+		{
+			get
+			{
+				return this._ReasonForExam;
+			}
+			set
+			{
+				if ((this._ReasonForExam != value))
+				{
+					this._ReasonForExam = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudyStatusCode", DbType="VarChar(2) NOT NULL", CanBeNull=false)]
+		public string StudyStatusCode
+		{
+			get
+			{
+				return this._StudyStatusCode;
+			}
+			set
+			{
+				if ((this._StudyStatusCode != value))
+				{
+					this._StudyStatusCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudyImageCount", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string StudyImageCount
+		{
+			get
+			{
+				return this._StudyImageCount;
+			}
+			set
+			{
+				if ((this._StudyImageCount != value))
+				{
+					this._StudyImageCount = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudyTimeStamp", DbType="VarChar(21)")]
+		public string StudyTimeStamp
+		{
+			get
+			{
+				return this._StudyTimeStamp;
+			}
+			set
+			{
+				if ((this._StudyTimeStamp != value))
+				{
+					this._StudyTimeStamp = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdmissionTimeDate", DbType="VarChar(21)")]
+		public string AdmissionTimeDate
+		{
+			get
+			{
+				return this._AdmissionTimeDate;
+			}
+			set
+			{
+				if ((this._AdmissionTimeDate != value))
+				{
+					this._AdmissionTimeDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitClass", DbType="NVarChar(1)")]
+		public string VisitClass
+		{
+			get
+			{
+				return this._VisitClass;
+			}
+			set
+			{
+				if ((this._VisitClass != value))
+				{
+					this._VisitClass = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitNumber", DbType="NVarChar(50)")]
+		public string VisitNumber
+		{
+			get
+			{
+				return this._VisitNumber;
+			}
+			set
+			{
+				if ((this._VisitNumber != value))
+				{
+					this._VisitNumber = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Priority", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string Priority
+		{
+			get
+			{
+				return this._Priority;
+			}
+			set
+			{
+				if ((this._Priority != value))
+				{
+					this._Priority = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SiteCode", DbType="NVarChar(12)")]
+		public string SiteCode
+		{
+			get
+			{
+				return this._SiteCode;
+			}
+			set
+			{
+				if ((this._SiteCode != value))
+				{
+					this._SiteCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimaryLocId", DbType="NVarChar(12)")]
+		public string PrimaryLocId
+		{
+			get
+			{
+				return this._PrimaryLocId;
+			}
+			set
+			{
+				if ((this._PrimaryLocId != value))
+				{
+					this._PrimaryLocId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PrimaryLocation", DbType="NVarChar(12)")]
+		public string PrimaryLocation
+		{
+			get
+			{
+				return this._PrimaryLocation;
+			}
+			set
+			{
+				if ((this._PrimaryLocation != value))
+				{
+					this._PrimaryLocation = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CurrentLocId", DbType="NVarChar(100)")]
+		public string CurrentLocId
+		{
+			get
+			{
+				return this._CurrentLocId;
+			}
+			set
+			{
+				if ((this._CurrentLocId != value))
+				{
+					this._CurrentLocId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CurrentLocation", DbType="NVarChar(100)")]
+		public string CurrentLocation
+		{
+			get
+			{
+				return this._CurrentLocation;
+			}
+			set
+			{
+				if ((this._CurrentLocation != value))
+				{
+					this._CurrentLocation = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StudySiteName", DbType="NVarChar(12)")]
+		public string StudySiteName
+		{
+			get
+			{
+				return this._StudySiteName;
+			}
+			set
+			{
+				if ((this._StudySiteName != value))
+				{
+					this._StudySiteName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RequestingPhysicianId", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string RequestingPhysicianId
+		{
+			get
+			{
+				return this._RequestingPhysicianId;
+			}
+			set
+			{
+				if ((this._RequestingPhysicianId != value))
+				{
+					this._RequestingPhysicianId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RequestingPhysician", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string RequestingPhysician
+		{
+			get
+			{
+				return this._RequestingPhysician;
+			}
+			set
+			{
+				if ((this._RequestingPhysician != value))
+				{
+					this._RequestingPhysician = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReferringPhysicianId", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string ReferringPhysicianId
+		{
+			get
+			{
+				return this._ReferringPhysicianId;
+			}
+			set
+			{
+				if ((this._ReferringPhysicianId != value))
+				{
+					this._ReferringPhysicianId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReferringPhysician", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string ReferringPhysician
+		{
+			get
+			{
+				return this._ReferringPhysician;
+			}
+			set
+			{
+				if ((this._ReferringPhysician != value))
+				{
+					this._ReferringPhysician = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AttendingPhysicianId", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string AttendingPhysicianId
+		{
+			get
+			{
+				return this._AttendingPhysicianId;
+			}
+			set
+			{
+				if ((this._AttendingPhysicianId != value))
+				{
+					this._AttendingPhysicianId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AttendingPhysician", DbType="VarChar(1) NOT NULL", CanBeNull=false)]
+		public string AttendingPhysician
+		{
+			get
+			{
+				return this._AttendingPhysician;
+			}
+			set
+			{
+				if ((this._AttendingPhysician != value))
+				{
+					this._AttendingPhysician = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioDicto", DbType="NVarChar(50)")]
+		public string usuarioDicto
+		{
+			get
+			{
+				return this._usuarioDicto;
+			}
+			set
+			{
+				if ((this._usuarioDicto != value))
+				{
+					this._usuarioDicto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioDictoNombre", DbType="NVarChar(150)")]
+		public string usuarioDictoNombre
+		{
+			get
+			{
+				return this._usuarioDictoNombre;
+			}
+			set
+			{
+				if ((this._usuarioDictoNombre != value))
+				{
+					this._usuarioDictoNombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioDictoApellidoPaterno", DbType="NVarChar(150)")]
+		public string usuarioDictoApellidoPaterno
+		{
+			get
+			{
+				return this._usuarioDictoApellidoPaterno;
+			}
+			set
+			{
+				if ((this._usuarioDictoApellidoPaterno != value))
+				{
+					this._usuarioDictoApellidoPaterno = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioDictoApellidoMaterno", DbType="NVarChar(150)")]
+		public string usuarioDictoApellidoMaterno
+		{
+			get
+			{
+				return this._usuarioDictoApellidoMaterno;
+			}
+			set
+			{
+				if ((this._usuarioDictoApellidoMaterno != value))
+				{
+					this._usuarioDictoApellidoMaterno = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_STATUS", DbType="Int")]
+		public System.Nullable<int> STATUS
+		{
+			get
+			{
+				return this._STATUS;
+			}
+			set
+			{
+				if ((this._STATUS != value))
+				{
+					this._STATUS = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_oeInterpretacionAprobada", DbType="Bit")]
+		public System.Nullable<bool> oeInterpretacionAprobada
+		{
+			get
+			{
+				return this._oeInterpretacionAprobada;
+			}
+			set
+			{
+				if ((this._oeInterpretacionAprobada != value))
+				{
+					this._oeInterpretacionAprobada = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_oeComentarioValidacion", DbType="NVarChar(MAX)")]
+		public string oeComentarioValidacion
+		{
+			get
+			{
+				return this._oeComentarioValidacion;
+			}
+			set
+			{
+				if ((this._oeComentarioValidacion != value))
+				{
+					this._oeComentarioValidacion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioRevisoID", DbType="NVarChar(50)")]
+		public string usuarioRevisoID
+		{
+			get
+			{
+				return this._usuarioRevisoID;
+			}
+			set
+			{
+				if ((this._usuarioRevisoID != value))
+				{
+					this._usuarioRevisoID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioRevisoNombre", DbType="NVarChar(150)")]
+		public string usuarioRevisoNombre
+		{
+			get
+			{
+				return this._usuarioRevisoNombre;
+			}
+			set
+			{
+				if ((this._usuarioRevisoNombre != value))
+				{
+					this._usuarioRevisoNombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioRevisoApellidoPaterno", DbType="NVarChar(150)")]
+		public string usuarioRevisoApellidoPaterno
+		{
+			get
+			{
+				return this._usuarioRevisoApellidoPaterno;
+			}
+			set
+			{
+				if ((this._usuarioRevisoApellidoPaterno != value))
+				{
+					this._usuarioRevisoApellidoPaterno = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuarioRevisoApellidoMaterno", DbType="NVarChar(150)")]
+		public string usuarioRevisoApellidoMaterno
+		{
+			get
+			{
+				return this._usuarioRevisoApellidoMaterno;
+			}
+			set
+			{
+				if ((this._usuarioRevisoApellidoMaterno != value))
+				{
+					this._usuarioRevisoApellidoMaterno = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_bkStatus", DbType="Bit NOT NULL")]
+		public bool bkStatus
+		{
+			get
+			{
+				return this._bkStatus;
+			}
+			set
+			{
+				if ((this._bkStatus != value))
+				{
+					this._bkStatus = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fechayhora", DbType="DateTime")]
+		public System.Nullable<System.DateTime> fechayhora
+		{
+			get
+			{
+				return this._fechayhora;
+			}
+			set
+			{
+				if ((this._fechayhora != value))
+				{
+					this._fechayhora = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SolicitaRevision", DbType="Int NOT NULL")]
+		public int SolicitaRevision
+		{
+			get
+			{
+				return this._SolicitaRevision;
+			}
+			set
+			{
+				if ((this._SolicitaRevision != value))
+				{
+					this._SolicitaRevision = value;
+				}
 			}
 		}
 	}

@@ -171,6 +171,9 @@ namespace FUJI.InterDF.Site.InterpretacionService {
         private string SiteCodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int SolicitaRevisionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string StudyIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -610,6 +613,19 @@ namespace FUJI.InterDF.Site.InterpretacionService {
                 if ((object.ReferenceEquals(this.SiteCodeField, value) != true)) {
                     this.SiteCodeField = value;
                     this.RaisePropertyChanged("SiteCode");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int SolicitaRevision {
+            get {
+                return this.SolicitaRevisionField;
+            }
+            set {
+                if ((this.SolicitaRevisionField.Equals(value) != true)) {
+                    this.SolicitaRevisionField = value;
+                    this.RaisePropertyChanged("SolicitaRevision");
                 }
             }
         }

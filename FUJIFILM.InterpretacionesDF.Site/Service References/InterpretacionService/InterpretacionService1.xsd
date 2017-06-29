@@ -37,6 +37,7 @@
       <xs:element minOccurs="0" name="RequestingPhysicianId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:int" />
       <xs:element minOccurs="0" name="SiteCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SolicitaRevision" type="xs:int" />
       <xs:element minOccurs="0" name="StudyId" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="StudyImageCount" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="StudySiteName" nillable="true" type="xs:string" />

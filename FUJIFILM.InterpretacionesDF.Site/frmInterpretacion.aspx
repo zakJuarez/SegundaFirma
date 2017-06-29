@@ -1,18 +1,35 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="frmInterpretacion.aspx.cs" Inherits="FUJIFILM.InterpretacionesDF.Site.frmInterpretacion" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <script type="text/javascript">
-        function Redirecciona(strRuta) {
-            var sID = Math.round(Math.random() * 10000000000);
-            var winX = screen.availWidth;
-            var winY = screen.availHeight;
-            sID = "E" + sID;
-            var win = window.open(strRuta, sID,
-                                            "menubar=yes,toolbar=yes,location=yes,directories=yes,status=yes,resizable=yes" +
-                                            ",scrollbars=yes,top=0,left=0,screenX=0,screenY=0,Width=" +
-                                            winX + ",Height=" + winY);
+        function Redirecciona(strRuta, urlSyn, version, idCarpeta, AccNum, InstSyn, pathSyn) {
+            if (version == 1) //browser
+            {
+                var sID = Math.round(Math.random() * 10000000000);
+                var winX = screen.availWidth;
+                var winY = screen.availHeight;
+                sID = "E" + sID;
+                var win = window.open(strRuta, sID,
+                                                "menubar=yes,toolbar=yes,location=yes,directories=yes,status=yes,resizable=yes" +
+                                                ",scrollbars=yes,top=0,left=0,screenX=0,screenY=0,Width=" +
+                                                winX + ",Height=" + winY);
+            }
+            if(version == 2)//versiones anteriores
+            {
+                var oSynapseAPI = new ActiveXObject('Synapse.SynapseAPI');
+                var carpetaAccNum = pathSyn.concat(AccNum); 
+                oSynapseAPI.OpenSynapseExplorer(InstSyn, urlSyn, carpetaAccNum);
+
+            }
+
+            if(version == 3)//API
+            {
+                var oSynapseAPI = new ActiveXObject("Synapse.SynapseAPI");
+                var sStudyPath = oSynapseAPI.MakePath(idCarpeta, AccNum);
+                oSynapseAPI.OpenSynapseExplorer(InstSyn, urlSyn, sStudyPath);
+            }
         }
 
-        function escribeArchivo(strLines,_url){
+        function escribeArchivo(strLines, _url, urlSyn, version, idCarpeta, AccNum, InstSyn, pathSyn) {
             try {
     
                 var fso = new ActiveXObject("Scripting.FileSystemObject");
@@ -21,7 +38,7 @@
                 //varFileObject.write(strLines);
                 varFileObject.close();
                 //ChangeFileName()
-                Redirecciona(_url);
+                Redirecciona(_url, urlSyn, version, idCarpeta, AccNum, InstSyn, pathSyn);
             }
             catch (err) {
                 alert(err);
@@ -170,7 +187,7 @@
                                                                 <asp:BoundField DataField="Modality" HeaderText="Modalidad" ReadOnly="true"/>
                                                                 <asp:BoundField DataField="AdmissionTimeDate" HeaderText="Fecha Estudio" ReadOnly="true" />
                                                                 <asp:BoundField DataField="Priority" HeaderText="Prioridad" ReadOnly="true" />
-                                                                <asp:TemplateField ControlStyle-Width="5%">
+                                                                <asp:TemplateField ControlStyle-Width="5%" HeaderText="Solicita Revisión">
                                                                     <ItemTemplate>
                                                                         <asp:Image ID="btnSolRev" runat="server" ImageUrl="~/Images/transparente.png" Height="20px" Width="20px" ></asp:Image>
                                                                     </ItemTemplate>
@@ -278,6 +295,11 @@
                                                                 <asp:BoundField DataField="Modality" HeaderText="Modalidad" ReadOnly="true"/>
                                                                 <asp:BoundField DataField="AdmissionTimeDate" HeaderText="Fecha Estudio" ReadOnly="true" />
                                                                 <asp:BoundField DataField="Priority" HeaderText="Prioridad" ReadOnly="true" />
+                                                                <asp:TemplateField ControlStyle-Width="5%" HeaderText="Solicita Revisión">
+                                                                    <ItemTemplate>
+                                                                        <asp:Image ID="btnSolRev" runat="server" ImageUrl="~/Images/transparente.png" Height="20px" Width="20px" ></asp:Image>
+                                                                    </ItemTemplate>
+                                                                </asp:TemplateField>
                                                                 <asp:TemplateField HeaderText="Revisar">
                                                                     <ItemTemplate>
                                                                         <center>

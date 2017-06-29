@@ -65,7 +65,8 @@ namespace FUJIFILM.InterpretacionesDF.DataAccess
                                     STATUS = item.STATUS,
                                     oeInterpretacionAprobada = item.oeInterpretacionAprobada,
                                     bkStatus    = item.bkStatus,
-                                    fechayhora = item.fechayhora
+                                    fechayhora = item.fechayhora,
+                                    SolicitaRevision = item.SolicitaRevision == null ? 0 : item.SolicitaRevision
                                 };
                     _lisReturn.AddRange(query);
                 }
