@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Entidades", "1.Entidades", "{E960CDD1-1529-4356-950A-5F3A305E0427}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.AccesoDatos", "2.AccesoDatos", "{8D5A28BC-DC6A-41E3-83B8-4D3A92042B7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Servicios", "3.Servicios", "{AB973A1D-CB01-45CD-A433-A74A39CAC4E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Sitio", "4.Sitio", "{A2D9F28B-E8AF-4A67-8393-0B6D147AC10B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FUJIFILM.InterpretacionesDF.Entidades", "FUJIFILM.InterpretacionesDF.Entidades\FUJIFILM.InterpretacionesDF.Entidades.csproj", "{4C15A162-F7E3-40D6-9865-6A9987CA5E40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FUJIFILM.InterpretacionesDF.DataAccess", "FUJIFILM.InterpretacionesDF.DataAccess\FUJIFILM.InterpretacionesDF.DataAccess.csproj", "{F6A6D7FA-E923-472F-9A0A-979EC23DD170}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FUJIFILM.InterpretacionesDF.Service", "InterpretacionService\FUJIFILM.InterpretacionesDF.Service.csproj", "{022E11B7-211F-45AA-9E09-55B2AE63781B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FUJI.Interpre.Site", "FUJIFILM.InterpretacionesDF.Site\FUJI.Interpre.Site.csproj", "{96A91D44-72E6-4B82-87A1-FBB4A7FEE212}"
+	ProjectSection(ProjectDependencies) = postProject
+		{022E11B7-211F-45AA-9E09-55B2AE63781B} = {022E11B7-211F-45AA-9E09-55B2AE63781B}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C15A162-F7E3-40D6-9865-6A9987CA5E40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C15A162-F7E3-40D6-9865-6A9987CA5E40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C15A162-F7E3-40D6-9865-6A9987CA5E40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C15A162-F7E3-40D6-9865-6A9987CA5E40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6A6D7FA-E923-472F-9A0A-979EC23DD170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A6D7FA-E923-472F-9A0A-979EC23DD170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A6D7FA-E923-472F-9A0A-979EC23DD170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A6D7FA-E923-472F-9A0A-979EC23DD170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{022E11B7-211F-45AA-9E09-55B2AE63781B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022E11B7-211F-45AA-9E09-55B2AE63781B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022E11B7-211F-45AA-9E09-55B2AE63781B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022E11B7-211F-45AA-9E09-55B2AE63781B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96A91D44-72E6-4B82-87A1-FBB4A7FEE212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96A91D44-72E6-4B82-87A1-FBB4A7FEE212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96A91D44-72E6-4B82-87A1-FBB4A7FEE212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96A91D44-72E6-4B82-87A1-FBB4A7FEE212}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4C15A162-F7E3-40D6-9865-6A9987CA5E40} = {E960CDD1-1529-4356-950A-5F3A305E0427}
+		{F6A6D7FA-E923-472F-9A0A-979EC23DD170} = {8D5A28BC-DC6A-41E3-83B8-4D3A92042B7D}
+		{022E11B7-211F-45AA-9E09-55B2AE63781B} = {AB973A1D-CB01-45CD-A433-A74A39CAC4E6}
+		{96A91D44-72E6-4B82-87A1-FBB4A7FEE212} = {A2D9F28B-E8AF-4A67-8393-0B6D147AC10B}
+	EndGlobalSection
+EndGlobal

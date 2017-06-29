@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/FUJIFILM.InterpretacionesDF.DataAccess" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/FUJIFILM.InterpretacionesDF.DataAccess" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfvBuscaEnRevision">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="vBuscaEnRevision" nillable="true" type="tns:vBuscaEnRevision" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfvBuscaEnRevision" nillable="true" type="tns:ArrayOfvBuscaEnRevision" />
+  <xs:complexType name="vBuscaEnRevision">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccessionNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdmissionTimeDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AttendingPhysician" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AttendingPhysicianId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentLocId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DOB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExternalPatientID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InternalPatientID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastMenstruationDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modality" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pregnancy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimaryLocId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimaryLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcedureCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProcedureDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RISOderId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReasonForExam" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferringPhysician" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReferringPhysicianId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestingPhysician" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestingPhysicianId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SiteCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudyId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudyImageCount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudySiteName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudyStatusCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StudyTimeStamp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VisitClass" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VisitNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="bkStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechayhora" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="oeComentarioValidacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="oeInterpretacionAprobada" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="usuarioDicto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioDictoApellidoMaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioDictoApellidoPaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioDictoNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioRevisoApellidoMaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioRevisoApellidoPaterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioRevisoID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuarioRevisoNombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="vBuscaEnRevision" nillable="true" type="tns:vBuscaEnRevision" />
+  <xs:complexType name="opeUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Falta" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fmodificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="cc" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="cmModalidad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="csCveSitioAut" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="csCveSitioDef" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="csSitio" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="estRegistro" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="iduser" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="oeModalidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouAdministrador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouAgenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouApellido1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouApellido2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouCamMedTra" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouCamion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouCancelaEstudios" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouCatalogo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouCedula" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouComentarios" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouConfirma" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouDictado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouDictadoNewLineMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouDireccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouEditaEstudio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouEsRecurso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouEventosUrgencias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouFinaliza" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouFirmaAusencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouFolio" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ouGrabador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouHOVACamion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouHistotecnologoA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouHistotecnologoB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouIDCard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouIDChecador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouIdHis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouIniciales" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouInsertaAddendum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouLiberaEstudios" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouListaTrabajo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouLoteGenerado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouMail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouMatricula" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouModificaReportes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouNUSA_applicationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouNUSA_habilitado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouNUSA_language" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouNUSA_src" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouNUSA_topic" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouNUSA_userId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouPacientes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouPatologo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouPerfilListaTrabajo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouReasignaIDPacientes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouReportes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouResidente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouSkin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouSobreturno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouTelefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouTelefonoM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouTelefonoO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouTipodeDictado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouTranscriptor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouUalta" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ouUmodificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ouUrgencias" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="ouVeImagenes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouVocaliIntegracion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouVocaliPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouVocaliPort" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ouVocaliServer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ouVocaliUSER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="scValorDefaultEditor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="opeUsuario" nillable="true" type="tns:opeUsuario" />
+</xs:schema>

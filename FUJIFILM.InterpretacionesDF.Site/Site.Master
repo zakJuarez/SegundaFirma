@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FUJIFILM.InterpretacionesDF.Site.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Segunda Firma</title>
+
+    <script type="text/javascript" src="Scripts/jquery-1.10.2.min.js" ></script>
+    <script type="text/javascript" src="Scripts/responsive-tabs.js" ></script>
+        <!-- Bootstrap -->
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="Scripts/bootstrap.min.js" ></script>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server" ID="ScriptManager_MasterPage" EnablePartialRendering="true" LoadScriptsBeforeUI="true">
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server">Segunda Firma</a>
+                    <div class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="javascript:cerrarpagina()">
+                                    <i class="icon-off"></i>
+                                    Cerrar sesión
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - InterpretacionesApp  <asp:label runat="server"  ID="lblUser" Text=""></asp:label></p>
+            </footer>
+        </div>
+        <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+            <ProgressTemplate>
+                <div class="contCenter" style="width: 100%; height: 100%; position: absolute; top: 0;
+                    clear: left; background-image: url(../Images/overlay.png)">
+                    <div class="updateProgress">
+                        <span class="updateProgressMessage">Procesando...</span>
+                        <asp:Image ID="idLoading" runat="server" ImageUrl="~/Images/quiz-loading.gif" />
+                    </div>
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+    </form>
+
+    <script type="text/javascript" >
+
+        function cerrarpagina() {
+            window.close();
+        }
+
+</script>
+</body>
+</html>

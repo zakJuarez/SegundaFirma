@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="RIS" Class="dbRiskDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.3.206;Initial Catalog=RIS;User ID=sa" SettingsObjectName="FUJIFILM.InterpretacionesDF.DataAccess.Properties.Settings" SettingsPropertyName="RISConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.vBuscaEnRevision" Member="vBuscaEnRevision">
+    <Type Name="vBuscaEnRevision">
+      <Column Name="AccessionNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ExternalPatientID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InternalPatientID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(453) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(301) NOT NULL" CanBeNull="false" />
+      <Column Name="DOB" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="Pregnancy" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="LastMenstruationDate" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="StudyId" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="RISOderId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProcedureCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProcedureDescription" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Modality" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReasonForExam" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="StudyStatusCode" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="StudyImageCount" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="StudyTimeStamp" Type="System.String" DbType="VarChar(21)" CanBeNull="true" />
+      <Column Name="AdmissionTimeDate" Type="System.String" DbType="VarChar(21)" CanBeNull="true" />
+      <Column Name="VisitClass" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="VisitNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SiteCode" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="PrimaryLocId" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="PrimaryLocation" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="CurrentLocId" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CurrentLocation" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="StudySiteName" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="RequestingPhysicianId" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="RequestingPhysician" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ReferringPhysicianId" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ReferringPhysician" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="AttendingPhysicianId" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="AttendingPhysician" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="usuarioDicto" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="usuarioDictoNombre" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="usuarioDictoApellidoPaterno" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="usuarioDictoApellidoMaterno" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="oeInterpretacionAprobada" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="oeComentarioValidacion" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="usuarioRevisoID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="usuarioRevisoNombre" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="usuarioRevisoApellidoPaterno" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="usuarioRevisoApellidoMaterno" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="bkStatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="fechayhora" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.opeUsuario" Member="opeUsuario">
+    <Type Name="opeUsuario">
+      <Column Name="ouUsuario" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="csSitio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ouFolio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ouID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ouNombre" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ouApellido1" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ouApellido2" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ouCedula" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ouMatricula" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ouIDChecador" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="ouDireccion" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ouTelefono" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ouTelefonoO" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ouTelefonoM" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ouMail" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ouComentarios" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ouCatalogo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouAgenda" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouConfirma" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouDictado" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouReportes" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouPacientes" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouAdministrador" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouEventosUrgencias" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouSkin" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Falta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ouUalta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fmodificacion" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ouUmodificacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="estRegistro" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="cc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ouUrgencias" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouSobreturno" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouListaTrabajo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouFinaliza" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouCamMedTra" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouPatologo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouHistotecnologoA" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouHistotecnologoB" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouResidente" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouLiberaEstudios" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouTranscriptor" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouGrabador" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouVeImagenes" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouIniciales" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ouPassword" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="ouIDCard" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ouLoteGenerado" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ouModificaReportes" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouPerfilListaTrabajo" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouInsertaAddendum" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="cmModalidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ouReasignaIDPacientes" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouTipodeDictado" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouCancelaEstudios" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ouEditaEstudio" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouIdHis" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ouFirmaAusencia" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouCamion" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ouHOVACamion" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="csCveSitioAut" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="csCveSitioDef" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ouNUSA_userId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ouNUSA_applicationName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ouNUSA_language" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ouNUSA_topic" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ouNUSA_src" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ouNUSA_habilitado" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouEsRecurso" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="ouDictadoNewLineMode" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="ouVocaliUSER" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ouVocaliPassword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ouVocaliServer" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="ouVocaliPort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ouVocaliIntegracion" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="scValorDefaultEditor" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="oeModalidad" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spProcedeBloqueo" Method="spProcedeBloqueo">
+    <Parameter Name="numeroAcceso" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="usuarioID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="spProcedeBloqueoResult">
+      <Column Name="" Member="Column1" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
